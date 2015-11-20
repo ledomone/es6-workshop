@@ -1,6 +1,6 @@
 describe('Object Literal', () => {
 
-  xit('can use shorthand for property names', () => {
+  it('can use shorthand for property names', () => {
 
     function createMonster(name, power) {
 
@@ -14,6 +14,17 @@ describe('Object Literal', () => {
       //    return `${this.name} attacked ${target.name}`;
       //  }
       //};
+      
+      return {
+       type: 'Monster',
+       name,
+       power,
+       attack(target){
+         console.log('RAAAARRRR!!! #breathesfire');
+         return `${this.name} attacked ${target.name}`;
+       }
+      };
+      
     }
 
     var godzilla = createMonster("Godzilla", 1000);
