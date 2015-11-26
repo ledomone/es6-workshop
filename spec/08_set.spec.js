@@ -1,10 +1,14 @@
 describe('SETS', () => {
 
-  xit('has an add method and a has method', ()=>{
+  it('has an add method and a has method', ()=>{
 
     // Create a new Set called 'mySet'
     // add the numbers 1, 2, and 3 to the set
-
+    let mySet = new Set();
+    mySet.add(1);
+    mySet.add(2);
+    mySet.add(3);
+    
 
     expect(mySet.has(1)).toBe(true);
     expect(mySet.has(2)).toBe(true);
@@ -13,11 +17,14 @@ describe('SETS', () => {
   });
 
 
-  xit('doesn`t allow duplicates', ()=>{
+  it('doesn`t allow duplicates', ()=>{
 
     // Create a new Set called 'mySet'
     // add the number 1 to it three times
-
+    let mySet = new Set();
+    mySet.add(1);
+    mySet.add(1);
+    mySet.add(1);
 
 
     expect(mySet.has(1)).toBe(true);
