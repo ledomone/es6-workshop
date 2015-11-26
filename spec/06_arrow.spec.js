@@ -1,13 +1,18 @@
 describe('Arrow Functions', () => {
 
-  xit('can replace traditional functions', () => {
+  it('can replace traditional functions', () => {
 
     let fnMultiply, arrowMultiply;
 
     //Write two functions that take two params and return their product
     //For 'fnMultiply', set it equal to a regular function
     //For 'arrowMultiply', set it equal to an arrow function
+    
+    fnMultiply = function (a, b) {
+      return a * b;
+    }
 
+    arrowMultiply = (a, b) =>  a * b;
 
     expect(fnMultiply(5, 5)).toBe(arrowMultiply(5, 5));
   });
